@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// JSX
+// ㄴ Javascript XML
+
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
+import { Grid } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid p={"40px 20px"} gap={"10px"} minH={"100vh"} templateRows={"120px auto 160px"}>
+      <RouterProvider router={router} />
+    </Grid>
   );
 }
 
